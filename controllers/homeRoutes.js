@@ -112,7 +112,7 @@ router.get('/view-posts', withAuth, async(req, res) => {
 
     res.render('viewPosts', {
       ...user,
-      logged_in: true
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
