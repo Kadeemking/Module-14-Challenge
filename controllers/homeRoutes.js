@@ -88,13 +88,27 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/create-post-form', withAuth, (req, res) => {
+router.get('/create-post-form', withAuth, async (req, res) => {
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
   }
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Project }],
+    });
 
-  res.render('createPostForm');
+    const user = userData.get({ plain: true });
+
+    res.render('createPostForm', {
+      ...user,
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+  // res.render('createPostForm');
 });
 
 router.get('/view-posts', withAuth, async(req, res) => {
