@@ -1,19 +1,19 @@
-<!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
+
+<div class="row mb-4 card">
+  <div class="card-header w-100">
+    <div class="display-flex justify-space-between text-default">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/comment/{{project.id}}">{{project.name}}</a>
+      <a href="/comment/{{project.id}}" class="no-button">{{project.name}}</a>
     </h2>
-    <p>
+
+    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+   </div>
+  </div>
+  <div class="card-body">
+     <p>
       {{project.description}}
     </p>
-  </div>
-  <div class="col-md-7">
-    
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
 </div>
 {{/each}}

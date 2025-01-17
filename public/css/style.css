@@ -7,13 +7,13 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #aeaeae;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: #e0eed0;
   text-decoration: underline;
 }
 
@@ -23,8 +23,15 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
-/* #title{
+.comment{
+  height: 5px;
+}
+
+#title{
+  background-color: #e0eed0;
   border: #000000 1px solid;
-  border-radius: 5px;
-  box-shadow: #000000 2px 2px 2px; 
-} */
+  border-radius: 7px;
+  box-shadow: #959191 4px 4px 2px; 
+  width: fit-content;
+  padding: 2px 10px;
+}
