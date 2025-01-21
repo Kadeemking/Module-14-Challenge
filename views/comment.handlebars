@@ -38,13 +38,14 @@
     <h3>Comments</h3>
     {{#if comments.length}}
       {{#each comments}}
-      <div class="comment">
-        <div class="comment-meta">
-          {{user.username}} on {{format_date createdAt}}
+      <div class="card">
+        <div class="card-header display-flex justify-space-between">
+          <h5 class="text-info">{{user.name}}</h5> 
+          <h5 class="text-info">{{format_date createdAt}}</h5> 
         </div>
-        <div class="comment-content">
+        <p class="card-body">
           {{content}}
-        </div>
+        </p>
       </div>
       {{/each}}
     {{else}}

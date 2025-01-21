@@ -20,11 +20,12 @@
       </div>
       <div class="card-body">
         <p>{{project.description}}</p>
-        {{!-- <button class="btn btn-sm btn-primary" data-id="{{project.id}}">DELETE</button> --}}
       </div>
     </div>
     {{/each}}
   </div>
+  {{else}}
+    <h3 class="container mt-4 text-primary">You haven't created any posts yet.</h3>
   {{/if}}
 </div>
 
