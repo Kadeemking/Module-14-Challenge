@@ -3,22 +3,10 @@
     <h3 for="project-name" class="text-info">{{name}}</h3>
     <p class="my-2 text-info">Posted by {{user.name}} on {{format_date date_created}}</p>
   </div>
-  <div class="card-body"></div>
-  {{!-- <h4 for="project-name">Content:</h4> --}}
-  <h6 class="p-3">{{description}}</h6>
-</div>
-
-{{!-- <div class="card">
-  <div class="card-header text-primary">.</div>
   <div class="card-body">
- <p>Comment</p>
-  <p>
-    <textarea name="" id="" class="form-input w-100"></textarea>
-    <button type="submit" class="btn btn-primary w-100">Submit</button>
-
-    {{!-- <button data-id="{{id}}" class="btn btn-primary delete-btn">Delete Comment</button> --}}
-  {{!-- </p>
-  </div> --}}
+    <p class="p-3">{{description}}</p>
+  </div>
+</div>
 
   {{#if logged_in}}
   <div class="comment-form-container">
@@ -28,7 +16,7 @@
         <textarea id="comment-content" class="form-input" rows="3"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="login-btn">Submit</button>
+        <button type="submit" class="btn btn-primary text-info">Submit</button>
       </div>
     </form>
   </div>
