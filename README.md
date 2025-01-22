@@ -20,19 +20,19 @@ Use "npm i" to download the Express, PG, DOTENV, and Sequelize libraries.
 ## Usage
 
 
-<a href="">Deployed Site</a> 
+<a href="https://techblog-o842.onrender.com">Deployed Site</a> 
 
-![Sign Up Page](.)
+![Login Page](./Assets/photos/14-loginPage.png)
 
-![Home Page](.)
+![Home Page](./Assets/photos/14-homePage.png)
 
-![Dashboard](.)
+![Comment on Post](./Assets/photos/14-commentOnPost.png)
 
-![Comment on Post](.)
+![Dashboard](./Assets/photos/14-dashboard.png)
 
-![Create Post](.)
+![Create Post](./Assets/photos/14-createPost.png)
 
-![Edit Post](.)
+![Edit Post](./Assets/photos/14-updatePost.png)
 
 ## Credits
 
